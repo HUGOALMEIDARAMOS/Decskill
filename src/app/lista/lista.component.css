@@ -1,0 +1,10 @@
+@import '../view/view.component.css';
+
+
+p{
+  margin: 0 5px 0 0;
+}
+
+.menu_fechar{
+  padding: 0;
+}

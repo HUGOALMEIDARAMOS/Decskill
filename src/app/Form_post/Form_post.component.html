@@ -1,0 +1,41 @@
+<section class="pt-5 mt-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row imagem">
+            <div class="col-sm-12 col-md-12 col-lg-1 imagem">
+              <img src="../../assets/perfil.PNG" class="img-fluid img-thumbnail rounded-circle">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-11">
+              <form [formGroup]="form" class="pb-4" (ngSubmit)="salvar()">
+                <textarea placeholder="O que está acontecendo?" formControlName="texto"
+                  class="form-control form-control-lg" rows="2" [maxlength]="characterCount"></textarea>
+                <span>Restam {{ updateCharacterCount() }} caracteres.</span>
+
+                <div class="row mt-2">
+                  <div class="col-12 mb-4">
+                    <span class="text-info"><i class="bi bi-globe-europe-africa text-info"></i>Qualquer pessoa pode
+                      responder</span>
+                  </div>
+                  <div class="col-6 icones">
+                    <i class="bi bi-image text-info"></i>
+                    <i class="bi bi-filetype-gif text-info"></i>
+                    <i class="bi bi-bar-chart-steps text-info"></i>
+                    <i class="bi bi-emoji-laughing text-info"></i>
+                    <i class="bi bi-calendar3 text-info"></i>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="btn btn-info" [disabled]="!form.valid">Tweetar</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
